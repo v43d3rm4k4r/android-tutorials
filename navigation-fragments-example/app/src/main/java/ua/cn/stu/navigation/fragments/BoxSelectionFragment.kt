@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import ua.cn.stu.navigation.R
-import ua.cn.stu.navigation.contract.HasCustomTitle
-import ua.cn.stu.navigation.contract.navigator
+import ua.cn.stu.navigation.contracts.HasCustomTitle
+import ua.cn.stu.navigation.contracts.navigator
 import ua.cn.stu.navigation.Options
 import ua.cn.stu.navigation.databinding.FragmentBoxSelectionBinding
 import ua.cn.stu.navigation.databinding.ItemBoxBinding
@@ -44,7 +44,7 @@ class BoxSelectionFragment : Fragment(), HasCustomTitle {
         timerHandler?.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentBoxSelectionBinding.inflate(inflater, container, false)
 
         createBoxes()

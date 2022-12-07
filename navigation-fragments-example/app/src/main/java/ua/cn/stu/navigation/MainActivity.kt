@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentResultListener
 import androidx.lifecycle.LifecycleOwner
 import ua.cn.stu.navigation.fragments.*
-import ua.cn.stu.navigation.contract.*
+import ua.cn.stu.navigation.contracts.*
 import ua.cn.stu.navigation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), Navigator {
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity(), Navigator {
 
     override fun <T : Parcelable> listenResult(clazz: Class<T>, owner: LifecycleOwner, listener: ResultListener<T>) {
         supportFragmentManager.setFragmentResultListener(clazz.name, owner, FragmentResultListener { key, bundle ->
-            listener.invoke(bundle.getParcelable(KEY_RESULT)!!)
+            listener(bundle.getParcelable(KEY_RESULT)!!)
         })
     }
 
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity(), Navigator {
         val fragment = currentFragment
 
         if (fragment is HasCustomTitle) {
-            binding.toolbar.title = getString(fragment.getTitleRes())
+            binding.toolbar.title = getString(fragment.getTitleRes()) /// как конвертить id строки в String
         } else {
             binding.toolbar.title = getString(R.string.fragment_navigation_example)
         }

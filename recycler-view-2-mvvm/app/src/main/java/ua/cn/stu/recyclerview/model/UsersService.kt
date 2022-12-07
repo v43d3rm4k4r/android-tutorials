@@ -1,9 +1,11 @@
 package ua.cn.stu.recyclerview.model
 
 import com.github.javafaker.Faker
+
 import ua.cn.stu.recyclerview.UserNotFoundException
 import ua.cn.stu.recyclerview.tasks.SimpleTask
 import ua.cn.stu.recyclerview.tasks.Task
+
 import java.util.*
 import java.util.concurrent.Callable
 

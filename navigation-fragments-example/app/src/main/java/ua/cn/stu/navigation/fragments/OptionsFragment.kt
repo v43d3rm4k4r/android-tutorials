@@ -8,10 +8,10 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import ua.cn.stu.navigation.R
-import ua.cn.stu.navigation.contract.CustomAction
-import ua.cn.stu.navigation.contract.HasCustomAction
-import ua.cn.stu.navigation.contract.HasCustomTitle
-import ua.cn.stu.navigation.contract.navigator
+import ua.cn.stu.navigation.contracts.CustomAction
+import ua.cn.stu.navigation.contracts.HasCustomAction
+import ua.cn.stu.navigation.contracts.HasCustomTitle
+import ua.cn.stu.navigation.contracts.navigator
 import ua.cn.stu.navigation.Options
 import ua.cn.stu.navigation.databinding.FragmentOptionsBinding
 
@@ -31,7 +31,7 @@ class OptionsFragment : Fragment(), HasCustomTitle, HasCustomAction {
                 throw IllegalArgumentException("You need to specify options to launch this fragment")
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentOptionsBinding.inflate(inflater, container, false)
 
         setupSpinner()
@@ -122,9 +122,6 @@ class OptionsFragment : Fragment(), HasCustomTitle, HasCustomAction {
         val count: Int,
         private val optionTitle: String
     ) {
-        override fun toString(): String {
-            return optionTitle
-        }
+        override fun toString(): String = optionTitle
     }
-
 }

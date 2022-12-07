@@ -1,8 +1,10 @@
 package ua.cn.stu.dialogs
 
 import android.content.DialogInterface
+import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import ua.cn.stu.dialogs.databinding.ActivityLevel2Binding
@@ -117,5 +119,4 @@ class DialogsLevel2Activity : AppCompatActivity() {
         @JvmStatic private val TAG = DialogsLevel2Activity::class.java.simpleName
         @JvmStatic private val KEY_VOLUME = "KEY_VOLUME"
     }
-
 }

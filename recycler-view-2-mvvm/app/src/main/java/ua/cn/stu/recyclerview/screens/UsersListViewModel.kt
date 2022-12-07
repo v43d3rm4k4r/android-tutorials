@@ -2,7 +2,7 @@ package ua.cn.stu.recyclerview.screens
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+
 import ua.cn.stu.recyclerview.R
 import ua.cn.stu.recyclerview.UserActionListener
 import ua.cn.stu.recyclerview.model.User

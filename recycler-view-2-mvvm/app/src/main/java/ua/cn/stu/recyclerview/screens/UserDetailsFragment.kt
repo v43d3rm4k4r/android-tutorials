@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+
 import com.bumptech.glide.Glide
+
 import ua.cn.stu.recyclerview.R
 import ua.cn.stu.recyclerview.databinding.FragmentUserDetailsBinding
 import ua.cn.stu.recyclerview.tasks.SuccessResult

@@ -1,4 +1,4 @@
-package ua.cn.stu.navigation.contract
+package ua.cn.stu.navigation.contracts
 
 import androidx.annotation.StringRes
 

@@ -2,6 +2,7 @@ package ua.cn.stu.recyclerview.tasks
 
 import android.os.Handler
 import android.os.Looper
+
 import java.util.concurrent.Callable
 import java.util.concurrent.Executors
 import java.util.concurrent.Future

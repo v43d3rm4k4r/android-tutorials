@@ -3,6 +3,7 @@ package ua.cn.stu.recyclerview.screens
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+
 import ua.cn.stu.recyclerview.App
 import ua.cn.stu.recyclerview.Navigator
 

@@ -1,4 +1,4 @@
-package ua.cn.stu.navigation.contract
+package ua.cn.stu.navigation.contracts
 
 import android.os.Parcelable
 import androidx.fragment.app.Fragment

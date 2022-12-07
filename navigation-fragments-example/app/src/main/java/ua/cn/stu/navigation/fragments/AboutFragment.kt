@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ua.cn.stu.navigation.BuildConfig
+import androidx.viewbinding.BuildConfig
 import ua.cn.stu.navigation.R
-import ua.cn.stu.navigation.contract.HasCustomTitle
-import ua.cn.stu.navigation.contract.navigator
+import ua.cn.stu.navigation.contracts.HasCustomTitle
+import ua.cn.stu.navigation.contracts.navigator
 import ua.cn.stu.navigation.databinding.FragmentAboutBinding
 
 class AboutFragment : Fragment(), HasCustomTitle {

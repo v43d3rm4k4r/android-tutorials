@@ -2,8 +2,8 @@ package ua.cn.stu.recyclerview.screens
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+
 import ua.cn.stu.recyclerview.R
-import ua.cn.stu.recyclerview.UserNotFoundException
 import ua.cn.stu.recyclerview.model.UserDetails
 import ua.cn.stu.recyclerview.model.UsersService
 import ua.cn.stu.recyclerview.tasks.EmptyResult

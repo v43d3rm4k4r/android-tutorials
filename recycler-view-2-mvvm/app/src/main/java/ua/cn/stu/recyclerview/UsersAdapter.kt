@@ -5,8 +5,11 @@ import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
+
 import androidx.recyclerview.widget.RecyclerView
+
 import com.bumptech.glide.Glide
+
 import ua.cn.stu.recyclerview.databinding.ItemUserBinding
 import ua.cn.stu.recyclerview.model.User
 import ua.cn.stu.recyclerview.screens.UserListItem

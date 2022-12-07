@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import ua.cn.stu.recyclerview.UserActionListener
+
 import ua.cn.stu.recyclerview.UsersAdapter
 import ua.cn.stu.recyclerview.databinding.FragmentUsersListBinding
-import ua.cn.stu.recyclerview.model.User
 import ua.cn.stu.recyclerview.tasks.EmptyResult
 import ua.cn.stu.recyclerview.tasks.ErrorResult
 import ua.cn.stu.recyclerview.tasks.PendingResult
@@ -28,7 +28,7 @@ class UsersListFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentUsersListBinding.inflate(inflater, container, false)
         adapter = UsersAdapter(viewModel)
 
