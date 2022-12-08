@@ -8,7 +8,7 @@ import java.util.concurrent.Executors
 import java.util.concurrent.Future
 
 private val executorService = Executors.newCachedThreadPool()
-private val handler = Handler(Looper.getMainLooper())
+private val handler         = Handler(Looper.getMainLooper())
 
 /**
  * Executing code of [callable] in a separate thread.
@@ -28,6 +28,7 @@ class SimpleTask<T>(
             } catch (e: Throwable) {
                 ErrorResult(e)
             }
+            // If listeners where added before we get result (how??)
             notifyListeners()
         }
     }
@@ -36,13 +37,13 @@ class SimpleTask<T>(
     private var errorCallback: Callback<Throwable>? = null
 
     override fun onSuccess(callback: Callback<T>): Task<T> {
-        this.valueCallback = callback
+        valueCallback = callback
         notifyListeners()
         return this
     }
 
     override fun onError(callback: Callback<Throwable>): Task<T> {
-        this.errorCallback = callback
+        errorCallback = callback
         notifyListeners()
         return this
     }
@@ -61,14 +62,14 @@ class SimpleTask<T>(
 
     private fun notifyListeners() {
         handler.post {
-            val result = this.result
-            val callback = this.valueCallback
+            val result        = this.result
+            val callback      = this.valueCallback
             val errorCallback = this.errorCallback
             if (result is SuccessResult && callback != null) {
                 callback(result.data)
                 clear()
             } else if (result is ErrorResult && errorCallback != null) {
-                errorCallback.invoke(result.error)
+                errorCallback(result.error)
                 clear()
             }
         }

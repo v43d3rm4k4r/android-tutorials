@@ -12,7 +12,7 @@ class ViewModelFactory(
 ) : ViewModelProvider.Factory {
 
     @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         val viewModel = when (modelClass) {
             UsersListViewModel::class.java -> {
                 UsersListViewModel(app.usersService)
@@ -26,7 +26,6 @@ class ViewModelFactory(
         }
         return viewModel as T
     }
-
 }
 
 fun Fragment.factory() = ViewModelFactory(requireContext().applicationContext as App)

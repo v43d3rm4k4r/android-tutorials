@@ -11,6 +11,9 @@ import java.util.concurrent.Callable
 
 typealias UsersListener = (users: List<User>) -> Unit
 
+/**
+ * A layer between users and view model + model core.
+ */
 class UsersService {
 
     private var users = mutableListOf<User>()

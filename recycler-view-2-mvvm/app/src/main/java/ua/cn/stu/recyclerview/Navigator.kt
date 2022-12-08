@@ -1,5 +1,6 @@
 package ua.cn.stu.recyclerview
 
+import androidx.annotation.StringRes
 import ua.cn.stu.recyclerview.model.User
 
 interface Navigator {
@@ -8,6 +9,6 @@ interface Navigator {
 
     fun goBack()
 
-    fun toast(messageRes: Int)
+    fun toast(@StringRes messageRes: Int)
 
 }

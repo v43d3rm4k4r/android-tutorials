@@ -1,13 +1,15 @@
 package ua.cn.stu.recyclerview
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+
+import androidx.appcompat.app.AppCompatActivity
+import androidx.annotation.StringRes
 import androidx.lifecycle.Lifecycle
+
 import ua.cn.stu.recyclerview.databinding.ActivityMainBinding
 import ua.cn.stu.recyclerview.model.User
 import ua.cn.stu.recyclerview.screens.UserDetailsFragment
-import ua.cn.stu.recyclerview.screens.UsersListFragment
 
 class MainActivity : AppCompatActivity(), Navigator {
 
@@ -41,7 +43,7 @@ class MainActivity : AppCompatActivity(), Navigator {
         runWhenActive { onBackPressed() }
     }
 
-    override fun toast(messageRes: Int) {
+    override fun toast(@StringRes messageRes: Int) {
         Toast.makeText(this, messageRes, Toast.LENGTH_SHORT).show()
     }
 

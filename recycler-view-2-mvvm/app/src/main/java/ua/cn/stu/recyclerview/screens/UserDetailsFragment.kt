@@ -30,7 +30,7 @@ class UserDetailsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentUserDetailsBinding.inflate(layoutInflater, container, false)
 
         viewModel.actionShowToast.observe(viewLifecycleOwner, Observer {
